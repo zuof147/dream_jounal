@@ -1,0 +1,168 @@
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background: rgb(235, 238, 221);
+  counter-reset: page;
+}
+
+@font-face {
+  font-family: nostrastream;
+  src: url(/typefaces/nostratest-stream.otf);
+}
+
+.dream1 {
+  font-size:10pt;
+  letter-spacing: 15px;
+  line-height: 20px;
+  text-align: justify;
+  text-justify: auto;
+}
+
+.dream2 {
+  font-size:10pt;
+  letter-spacing: 15px;
+  line-height: 20px;
+  text-align: justify;
+  text-justify: auto;
+  transform: rotate(-5deg)
+  skew(-5deg);
+}
+
+.dream3 {
+  font-size:10pt;
+  letter-spacing: 15px;
+  line-height: 20px;
+  text-align: justify;
+  text-justify: auto;
+  break-before: page;
+  transform:skew(60deg, -30deg) scaleY(.66667);
+}
+
+.dream4 {
+  position: absolute;
+  top: 30%;
+  left: -50%;
+  font-size:12pt;
+  letter-spacing: 15px;
+  line-height: 20px;
+  text-align: justify;
+  text-justify: auto;
+  break-before: page;
+  transform: rotate(90deg)
+  skew(0deg);
+  width:200%;
+}
+
+.dream5 {
+  font-size: 10px;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%) skew(-8deg) rotate(10deg);
+  break-before: page;
+  letter-spacing: 30px;
+}
+
+.dream6 {
+  font-size: 10px;
+  line-height: 8px;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%) skew(10deg) rotate(-20deg);
+  break-before: page;
+  letter-spacing: 30px;
+}
+
+@media print {
+  body {
+    background: white;
+  }
+}
+
+@page {
+  size: 5in 8in;
+  margin-top: 0.7in;
+  margin-bottom: 0.25in;
+}
+@page:left {
+  margin-left: 0.25in;
+  margin-right: 0.25in;
+  @top-left {
+    content: counter(page);
+  }
+  @top-right {
+    content:"07/04/22";
+  }
+}
+@page:right {
+  margin-left: 0.25in;
+  margin-right: 0.25in;
+
+@top-left {
+  content:"08/13/21";
+}
+@top-right {
+  content: counter(page);
+}
+}
+
+h1 {
+  font-family: sans-serif;
+  font-size: 50px;
+  break-after: page;
+}
+.d1 {
+  max-width: 100%;
+  height: auto;
+  top:20%;
+  left:0%;
+  position: relative;
+  break-after: page;
+}
+
+.d2 {
+  position: absolute;
+  top:10%;
+  left:10%;
+}
+
+.d3 {
+  max-width: 100%;
+  height: auto;
+  top:10%;
+  left:0%;
+  position: relative;
+  break-after: page;
+}
+
+.d4 {
+  max-width: 90%;
+  height: auto;
+  top:20%;
+  left:5%;
+  position: relative;
+  break-after: page;
+}
