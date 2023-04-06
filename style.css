@@ -23,26 +23,83 @@ table {
 
 body {
   font-family: sans-serif;
-  background: rgb(235, 238, 221);
+  background: #a2ff7e;;
   counter-reset: page;
 }
 
-@font-face {
-  font-family: nostrastream;
-  src: url(/typefaces/nostratest-stream.otf);
+.cover {
+  position: absolute;
+  top: 30%;
+  right: 40px;
+  font-size: 13px;
+  letter-spacing: 30px;
+  text-align: center;
+}
+
+.cover1 {
+  font-family: 'Courier New', Courier, monospace;
+  position: absolute;
+  left: 40%;
+  top: 55%;
+   font-size: 8px;
+   transform: rotate(25deg) skew(0deg);
+   letter-spacing: 5px;
+   break-after: page;
+}
+
+.date1 {
+  position:absolute;
+  right:10px;
+  top: -42.5px;
+}
+
+.date2 {
+  position:absolute;
+  right:10px;
+  top: -42.5px;
+}
+
+.date3 {
+  position:absolute;
+  right:10px;
+  top: -42.5px;
+}
+
+.date4 {
+  position:absolute;
+  right:10px;
+  top: -42.5px;
+}
+
+.date5 {
+  position:absolute;
+  right:10px;
+  top: -42.5px;
+}
+
+.date6 {
+  position:absolute;
+  right:10px;
+  top: -42.5px;
+}
+
+.date7 {
+  position:absolute;
+  right:10px;
+  top: -42.5px;
 }
 
 .dream1 {
   font-size:10pt;
   letter-spacing: 15px;
-  line-height: 20px;
+  line-height: 15px;
   text-align: justify;
   text-justify: auto;
 }
 
 .dream2 {
   font-size:10pt;
-  letter-spacing: 15px;
+  letter-spacing: 12px;
   line-height: 20px;
   text-align: justify;
   text-justify: auto;
@@ -51,12 +108,13 @@ body {
 }
 
 .dream3 {
+  top: 130px;
   font-size:10pt;
-  letter-spacing: 15px;
-  line-height: 20px;
+  letter-spacing: 10px;
+  line-height: 18px;
   text-align: justify;
   text-justify: auto;
-  break-before: page;
+  break-after: page;
   transform:skew(60deg, -30deg) scaleY(.66667);
 }
 
@@ -64,15 +122,14 @@ body {
   position: absolute;
   top: 30%;
   left: -50%;
-  font-size:12pt;
+  font-size:10pt;
   letter-spacing: 15px;
-  line-height: 20px;
+  line-height: 15px;
   text-align: justify;
   text-justify: auto;
-  break-before: page;
-  transform: rotate(90deg)
-  skew(0deg);
-  width:200%;
+  break-after: page;
+  transform: rotate(90deg);
+  width: 200%;
 }
 
 .dream5 {
@@ -87,82 +144,165 @@ body {
 
 .dream6 {
   font-size: 10px;
-  line-height: 8px;
+  line-height: 7px;
   position: absolute;
-  top:50%;
-  left: 50%;
+  top:40%;
+  left: 60%;
   transform: translate(-50%,-50%) skew(10deg) rotate(-20deg);
   break-before: page;
   letter-spacing: 30px;
 }
 
+.dream7 {
+  font-size: 10px;
+  line-height: 7px;
+  position: absolute;
+  top:15%;
+  left: 0%;
+  transform:skew(0deg) rotate(15deg);
+  letter-spacing: 10px;
+  break-before: page;
+}
+
+.dream8 {
+  font-size: 10px;
+  line-height: 7px;
+  position: absolute;
+  top:35%;
+  left: 0%;
+  transform:skew(0deg) rotate(-15deg);
+  letter-spacing: 10px;
+}
+
+.dream9 {
+  font-size: 10px;
+  line-height: 7px;
+  position: absolute;
+  top:55%;
+  left: 0%;
+  transform:skew(0deg) rotate(15deg);
+  letter-spacing: 10px;
+}
+
 @media print {
   body {
-    background: white;
+    background: #a2ff7e;
   }
 }
 
+@page:first {
+  @top-right {
+  content: none;
+  }}
+
+  @page: last {
+    @top-left {
+    content: none;
+    }}
+
 @page {
-  size: 5in 8in;
+  size: 4.75in 8in;
+  bleed: 0.25in;
+  marks: crop;
   margin-top: 0.7in;
   margin-bottom: 0.25in;
+  
 }
 @page:left {
   margin-left: 0.25in;
-  margin-right: 0.25in;
+  margin-right: 0.75in;
   @top-left {
     content: counter(page);
   }
-  @top-right {
-    content:"07/04/22";
-  }
+
 }
 @page:right {
-  margin-left: 0.25in;
+  margin-left: 0.75in;
   margin-right: 0.25in;
 
-@top-left {
-  content:"08/13/21";
-}
 @top-right {
   content: counter(page);
 }
 }
 
-h1 {
-  font-family: sans-serif;
-  font-size: 50px;
-  break-after: page;
+.coverimg {
+  
+  max-width: 100%;
+  top:22%;
+  left:0%;
+  position: absolute;
+  transform: rotate(30deg);
 }
 .d1 {
   max-width: 100%;
-  height: auto;
-  top:20%;
+  top:22%;
   left:0%;
   position: relative;
   break-after: page;
+  transform: rotate(5deg);
 }
 
 .d2 {
-  position: absolute;
-  top:10%;
-  left:10%;
+  max-width: 100%;
+  height: auto;
+  top:15%;
+  left:0%;
+  position: relative;
+  break-after: page;
 }
 
 .d3 {
   max-width: 100%;
   height: auto;
-  top:10%;
-  left:0%;
+  top:12%;
+  left:5%;
   position: relative;
   break-after: page;
 }
 
 .d4 {
-  max-width: 90%;
+  max-width: 100%;
   height: auto;
   top:20%;
-  left:5%;
+  left:3%;
   position: relative;
-  break-after: page;
+  break-before: page;
+}
+
+.d5 {
+  max-width: 110%;
+  height: auto;
+  top:10%;
+  left:-30px;
+  position: relative;
+  break-before: page;
+}
+
+.d6 {
+  max-width: 110%;
+  height: auto;
+  top:10%;
+  left:-30px;
+  position: relative;
+  break-before: page;
+}
+
+.d7 {
+  max-width: 105%;
+  height: auto;
+  top:5%;
+  left:-10px;
+  position: relative;
+  break-before: page;
+}
+
+.backcover {
+  font-size: 13px;
+  line-height: 15px;
+  position: absolute;
+  top:0%;
+  right: 0%;
+  break-before: page;
+  width: 30%;
+  text-align: justify;
 }
